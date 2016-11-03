@@ -1,0 +1,19 @@
+body {
+ margin: 0;
+ padding: 0;
+}
+
+#background
+{
+ //font-family: 'GothamNarrow';
+  //color: transparent;
+  left: 0px;
+  top: 0px;
+  //position: relative;
+  margin: 0;
+ padding: 0;
+  width: 1280px;
+  height: 720px;
+  overflow: hidden;
+  z-index:0;
+ }

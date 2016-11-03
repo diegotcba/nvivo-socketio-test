@@ -7,13 +7,6 @@
 
   function render (data) {
     var count = data.length;
-    var notifications = data.map(function(elem, index) {
-      if(index < 5) {
-        return(elem.idMensaje + ' - ' + elem.titulo);
-      }
-    }).join("\n")
-
-    var header = 'Tienes ' + count + ' alertas';
 
     if(count != 0)
     {
