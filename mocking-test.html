@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>nViVoCG Mocking</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <p id="demo"></p>
+    <button onclick="start()">Start time</button>
+   <button onclick="clearInterval(myVar)">Stop time</button>
+
+   <script>
+   var myVar;
+   function myTimer() {
+       var d = new Date();
+       document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+       console.log('start mocking');
+       startMocking();
+   }
+
+   function start() {
+     myVar = setInterval(myTimer, 1000);
+   }
+   </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script src="./js/mocking-test.js"></script>
+
+  </body>
+</html>
