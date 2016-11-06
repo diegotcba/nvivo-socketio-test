@@ -15,6 +15,23 @@
     <![endif]-->
   </head>
   <body>
+    <p>
+
+    </p>
+    <p>
+      <input type="text" id="homeName" value="Equipo1">
+      <input type="text" id="homeScore" value="0" maxlength="3" style="width: 40px">
+      <button type="button" onclick="setScore('homeScore',1)">+1</button>
+      <button type="button" onclick="setScore('homeScore',2)">+2</button>
+      <button type="button" onclick="setScore('homeScore',3)">+3</button>
+    </p>
+    <p>
+      <input type="text" id="awayName" value="Equipo2">
+      <input type="text" id="awayScore" value="0" maxlength="3" style="width: 40px">
+      <button type="button" onclick="setScore('awayScore',1)">+1</button>
+      <button type="button" onclick="setScore('awayScore',2)">+2</button>
+      <button type="button" onclick="setScore('awayScore',3)">+3</button>
+    </p>
     <p id="demo"></p>
     <button onclick="start()">Start time</button>
    <button onclick="clearInterval(myVar)">Stop time</button>

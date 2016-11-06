@@ -1,11 +1,17 @@
-  var socket = io.connect('http://52.42.156.8:4040', { 'forceNew': true });
+  //var serverAddress = 'http://52.42.156.8:4040';
+  var serverAddress = 'http://localhost:4040';
+
+  var socket = io.connect(serverAddress, { 'forceNew': true });
   var objetos = [];
   var posetionTimer = 24;
 
-  var msj1 = {idMensaje: 45, titulo: 'Atenas', descripcion: '00.00'};
-  var msj2 = {idMensaje: 36, titulo: 'Regatas', descripcion: '09'};
+  var matchInfo = {homeTeamName: 'Atenas', awayTeamName: 'Regatas (er)', homeTeamScore: 45, awayTeamScore: 36,
+            quarter: '2Q', matchClock: '12:26', posetionClock: '24'}
 
-  objetos = new Array(msj1, msj2);
+  function setScore(textField, value) {
+    var aux = document.getElementById(textField).value;
+    document.getElementById(textField).value = Number(aux) + value;
+  }
 
   function startMocking() {
       var d = new Date();
@@ -14,13 +20,17 @@
       if (posetionTimer <= 0) {
         posetionTimer = 24;
       }
-      objetos[0].descripcion = d.toLocaleTimeString();
-      objetos[1].descripcion = posetionTimer.toString();
+      matchInfo.matchClock = d.toLocaleTimeString();
+      matchInfo.posetionClock = posetionTimer.toString();
+      matchInfo.homeTeamName = document.getElementById('homeName').value;
+      matchInfo.awayTeamName = document.getElementById('awayName').value;
+      matchInfo.homeTeamScore= document.getElementById('homeScore').value;
+      matchInfo.awayTeamScore = document.getElementById('awayScore').value;
 
-      console.log(objetos);
+      console.log(matchInfo);
 
       console.log('calling sendData');
-      sendData(objetos);
+      sendData(matchInfo);
   }
 
   function sendData(messages) {
@@ -32,6 +42,6 @@
     console.log(jsonContent);
 
     console.log('emiting socketio');
-    socket.emit('new-message', jsonContent);
+    socket.emit('messages', jsonContent);
     console.log('==== fin sendData ====');
   }

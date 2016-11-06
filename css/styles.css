@@ -3,17 +3,118 @@ body {
  padding: 0;
 }
 
-#background
-{
+.container {
  //font-family: 'GothamNarrow';
   //color: transparent;
   left: 0px;
   top: 0px;
-  //position: relative;
+  position: relative;
   margin: 0;
  padding: 0;
   width: 1280px;
   height: 720px;
   overflow: hidden;
-  z-index:0;
+  z-index: 0;
+  //background-color: red;
+  //opacity: 0.5;
+  //visibility: hidden;
+ }
+
+ .scoreboard {
+   margin: auto;
+   z-index: 1;
+   position: absolute;
+   left: 320px;
+   bottom: 40px;
+   width: 450px;
+   height: 40px;
+   //border-width: thin;
+   //border-style: solid;
+   background-color: blue;
+   opacity: 1;
+ }
+
+ .scoreboard-bg {
+   z-index: 10;
+   position: absolute;
+   left: 0px;
+   width: 350px;
+   height: 40px;
+   background: url(../images/scoreboard-bg.png) 0px 0px/350px 35px no-repeat border-box;
+ }
+
+ .scoreboard-clocks-bg {
+   z-index: 5;
+   position: relative;
+   left: -35px;
+   width: 101px;
+   height: 35px;
+   background: yellow url(../images/scoreboard-clocks-bg.png) 0px 0px/100px 35px no-repeat;
+ }
+
+ .teamName {
+   color: black;
+   vertical-align: middle;
+   font-size: 12pt;
+   text-transform: uppercase;
+   font-weight: bolder;
+ }
+
+ .score {
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    font-size: 16pt;
+    font-weight: bolder;
+    text-transform: uppercase;
+    bottom: 6px;
+ }
+
+ .homeTeamName {
+   position: absolute;
+   left: 6px;
+   text-align: left;
+ }
+
+ .awayTeamName {
+   position: absolute;
+   right: 6px;
+   text-align: right;
+ }
+
+ .homeScore {
+   position: absolute;
+   left: 130px;
+ }
+
+ .awayScore {
+   position: absolute;
+   right: 130px;
+ }
+
+ .clock {
+   position: absolute;
+   color: white;
+   font-size: 9pt;
+   font-weight: bold;
+   right: 9px;
+   text-align: right;
+ }
+
+ .matchClock {
+   top: 2.5px;
+ }
+
+ .posetionClock {
+   bottom: 1px;
+ }
+
+ .quarter {
+   color: white;
+   font-size: 9pt;
+   font-weight: bold;
+   text-align: left;
+   position: absolute;
+   right: 39px;
+   bottom: 1px;
  }

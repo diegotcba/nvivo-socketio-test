@@ -19,14 +19,23 @@
     <![endif]-->
   </head>
   <body>
-    <div id="background" style="">
-      <div id="scoreboard">
-        <span id="homeTeamName" class="label label-default">sdfg</span>
-        <span id="homeTeamScore" class="label-success">sdfg</span><br>
-        <span id="awayTeamName" class="label label-default">sdf</span>
-        <span id="awayTeamScore" class="label-success">sdfg</span><br>
-        <span id="timer" class="label-warning">sdfg</span>
-        <span id="posetionTimer" class="label-info">sdfg</span>
+    <div class="container">
+      <div class="scoreboard">
+        <table class="table">
+          <tr>
+            <td class="scoreboard-bg">
+              <span id="homeTeamName" class="teamName homeTeamName">sdfg</span>
+              <span id="homeTeamScore" class="score homeScore">000</span>
+              <span id="awayTeamScore" class="score awayScore">000</span>
+              <span id="awayTeamName" class="teamName awayTeamName">sdf</span>
+            </td>
+            <td class="scoreboard-clocks-bg">
+              <span id="timer" class="clock matchClock">12:56</span>
+              <span id="posetionTimer" class="clock posetionClock">24</span>
+              <span id="quarter" class="quarter">2Q</span>
+            </td>
+          </tr>
+        </table>
       </div>
     </div>
 
